@@ -1,223 +1,52 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <title>Click Counter</title>
-  <style>
-    
-    progress::-webkit-progress-value {
-      margin-bottom: 150px;
-      background-color: aqua;
-      border-radius: 10px;
-
-    }
-
-    
-    body {
-      
-      -webkit-tap-highlight-color: rgba(0,0,0,0);
-      -webkit-tap-highlight-color: transparent;
-      background-color: #0e0b18;
-      font-family: Arial, sans-serif;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      height: 100vh;
-    }
-    button{
-      text-align: center;
-      -webkit-tap-highlight-color: rgba(0,0,0,0);
-      -webkit-tap-highlight-color: transparent;
-      display: inline-block;
-      border: none;
-      cursor: pointer;
-      background-color: rgb(56, 56, 105);
-
-    }
-    #click-me {
-      margin-top: 25PX;
-      border-radius:100px;
-      width:200px;
-      height:200px;
-      color: white;
-      text-decoration: none;
-      display: inline-block;
-      font-size: 100px;
-      cursor: pointer;
-    }
-    #src{
-      border-radius:100px;
-      width:100%;
-      height:100%;
-      color: rgba(255, 255, 255, 0);
-      text-decoration: none;
-      display: inline-block;
-      cursor: pointer;
-    }
-    #counter {
-      font-size: 48px;
-      color: #6c8399;
-      text-align: center;
-      margin-top: 35px;
-    
-    }
-    #plus{
-      height: 50px;
-      width: 105px;
-      font-size: 20px;
-      color:white;
-    }#avto{
-      height: 50px;
-      width: 105px;
-      font-size: 20px;
-      color:white;
-    }
-    .push{
-        animation: touch 0.1s linear;
-    }
-    @keyframes touch{
-
-        50%{
-            width: 175px;height: 175px;margin-top: 50px;
-        }
-    }
-    #reet{
-      margin-top: 50% ;
-      width: 100%;
-         
-      -webkit-tap-highlight-color: rgba(0,0,0,0);
-      -webkit-tap-highlight-color: transparent;
-      background-color: #0e0b18;
-      font-family: Arial, sans-serif;
-      display: flex;
-      flex-direction:row;
-      align-items: center;
-      justify-content: center;
-      height: 100vh;
-    }
-    #b1{
-      width: 24%;
-      margin-right: 1%;
-      height: 20%;
-    }
-    #b2{
-      width: 24%;
-      margin-right: 1%;
-      height: 20%;
-    }
-    #b3{
-      width: 24%;
-      margin-right: 1%;
-      height: 20%;
-    }
-    #b4{
-      width: 24%;
-      margin-right: 1%;
-      height: 20%;
-    }
-    #sect2{
-      display: none ;
-    }
-    #sect3{
-      display: none;
-    }
-    #sect4{
-      display: none;
-    }
-  </style>
-  <section id = "sect1">
-    <div>
-      <button id = "plus">+1(150)</button>
-      <button id ="avto">auto(450)</button>
-    </div>
-  </section>
-  
-</head>
-<body>
-  <section id="sect1">
-    
-    <button id="click-me"><img id = "src" src="Durov.png"></button>
-    <div id="counter">0</div>
-  </section>
-  <section id = "sect2">
-
-  </section>
-  <section id = "sect3">
-
-  </section>
-  <section id = sect4>
-
-  </section>
-  <script>
-    var avtrue = false;
-    var click = 1;
-    var count1 = 0;
-    var cn = 0
-    var vid =document.getElementById("src")
-    var pl = document.getElementById("plus");
-    var cl = document.getElementById("avto");
-    var pr = document.getElementById("pr");
-    var button = document.getElementById("click-me");
-    var counter = document.getElementById("counter");
-    button.addEventListener("click", function() {
-      count1=count1 + click;
-      cn=cn+click;
-      pr.value = count1;
-      counter.innerHTML = cn;
-      if (button.classList != "push"){
-          button.classList.add("push")
-      }
-      setTimeout(function(){
-          button.classList.remove("push")
-      },300)
-      if (pr.value >= 50){
-        pr.value = 0;
-        count1 = 0
-      }
-      if(cn >50){
-        vid.src ="5364126037707873578.png"
-        
-      }
-      if(cn >100){
-
-        vid.src ="5364308011177237505.png"
-      }
-      if(cn >150){
-
-        vid.src ="5364274544792066934.png"
-      }
-      if(cn >200){
-        vid.src ="5364257274728565928.png"
-      }
-    });
-    pl.addEventListener("click",function(){
-        if(cn > 150){
-            click++;
-            cn = cn-150;
-            counter.innerHTML = cn
-        }
-        
-    });
-    cl.addEventListener("click",function(){
-        if(cn > 450&& avtrue != true){
-            avtrue = true
-            cn = cn - 450;
-        }
-    })
-    let lop = setInterval(function(){
-        if (avtrue == true){
-            cn++;
-            count1++;
-            counter.innerHTML = cn;
-            pr.value = count1
-        }
-    },1000)
-  </script>
+<body bgcolor="#000" background="http://crescer-galaxy.surge.sh/img/sky.gif">
+  <center>
+    <h1>
+      <font face="Impact" color="white" size="8">
+        HELP US TO CAPTURE THE
+      </font>
+      <font face="Impact" color="red" size="8">
+        IMPOSTER AIRCRAFT
+      </font>
+    </h1>
+    <p>
+      <font face="Arial" color="white" size="3">
+        There is an impostor aircraft in our squad. We need your help to capture them.
+      </font>
+    </p>
+    <h2>
+      <font face="Impact" color="orange" size="5">
+        YOU HAVE JUST ONE SINGLE CHANCE
+      </font>
+    </h2>
+  </center>
+  <marquee direction="right" scrolldelay="0">
+    <a href="https://codepen.io/sergioandrade/full/abNVdrX" target="_top">
+      <img src="https://img1.gratispng.com/20180320/buq/kisspng-galaga-spaceship-s80-spaceship-free-spacecraft-designs-spacecraft-png-5ab1b64c3b4331.4887499415215959802428.jpg" alt="Nave" width="120">
+    </a>
+  </marquee>
+  <marquee direction="right" scrolldelay="200">
+    <a href="https://codepen.io/sergioandrade/full/abNVdrX" target="_top">
+      <img src="https://img1.gratispng.com/20180320/buq/kisspng-galaga-spaceship-s80-spaceship-free-spacecraft-designs-spacecraft-png-5ab1b64c3b4331.4887499415215959802428.jpg" alt="Nave" width="120">
+    </a>
+  </marquee>
+  <marquee direction="right" scrolldelay="130">
+    <a href="https://codepen.io/sergioandrade/full/abNVdrX" target="_top">
+      <img src="https://img1.gratispng.com/20180320/buq/kisspng-galaga-spaceship-s80-spaceship-free-spacecraft-designs-spacecraft-png-5ab1b64c3b4331.4887499415215959802428.jpg" alt="Nave" width="120">
+    </a>
+  </marquee>
+  <marquee direction="right" scrolldelay="100">
+    <a href="https://codepen.io/sergioandrade/full/VwaraKe" target="_top">
+      <img src="https://img1.gratispng.com/20180320/buq/kisspng-galaga-spaceship-s80-spaceship-free-spacecraft-designs-spacecraft-png-5ab1b64c3b4331.4887499415215959802428.jpg" alt="Nave" width="120">
+    </a>
+  </marquee>
+  <marquee direction="right" scrolldelay="150">
+    <a href="https://codepen.io/sergioandrade/full/abNVdrX" target="_top">
+      <img src="https://img1.gratispng.com/20180320/buq/kisspng-galaga-spaceship-s80-spaceship-free-spacecraft-designs-spacecraft-png-5ab1b64c3b4331.4887499415215959802428.jpg" alt="Nave" width="120">
+    </a>
+  </marquee>
+  <marquee direction="right" scrolldelay="50">
+    <a href="https://codepen.io/sergioandrade/full/abNVdrX" target="_top">
+      <img src="https://img1.gratispng.com/20180320/buq/kisspng-galaga-spaceship-s80-spaceship-free-spacecraft-designs-spacecraft-png-5ab1b64c3b4331.4887499415215959802428.jpg" alt="Nave" width="120">
+    </a>
+  </marquee>
 </body>
-<footer id = "reet">
-  <button id = "b1">1</button>
-  <button id = "b2">2</button>
-  <button id = "b3">3</button>
-  <button id = "b4">4</button>
-</footer>
-</html>
